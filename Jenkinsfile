@@ -12,7 +12,6 @@ agent any
     stage('Checkout Source') {
       steps {
         git 'https://github.com/vincentfurtado/nodeapp_test.git'
-        env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
       }
     }
 
