@@ -1,18 +1,18 @@
 pipeline {
-  agent {
-    label 'docker' 
-  }
+
   environment {
     dockerimagename = "vincentfurtado/nodeapp"
     dockerImage = ""
   }
 
-
+agent any 
+  
   stages {
 
     stage('Checkout Source') {
       steps {
         git 'https://github.com/vincentfurtado/nodeapp_test.git'
+        env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
       }
     }
 
