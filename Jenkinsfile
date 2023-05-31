@@ -15,13 +15,9 @@ agent any
       }
     }
 
-    stage('Build image') {
-      steps{
-        script {
-          dockerImage = docker.build dockerimagename
-        }
-      }
-    }
+   stage ('Container Image Builds') {
+      sh 'sudo docker build -t vincentfurtado/nodeapp:latest .'
+   }
 
     stage('Pushing Image') {
       environment {
