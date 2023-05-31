@@ -15,7 +15,7 @@ agent any
       }
     }
 
-   stage ('Container Image Builds') {
+    stage ('Container Image Builds') {
       sh 'sudo docker build -t vincentfurtado/nodeapp:latest .'
    }
 
