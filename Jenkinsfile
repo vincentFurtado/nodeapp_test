@@ -3,11 +3,8 @@ pipeline {
   environment {
     dockerimagename = "vincentfurtado/nodeapp"
     dockerImage = ""
+    env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
   }
-  stage('Initialize')
-    {
-        env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
-    }
 
   agent any
 
