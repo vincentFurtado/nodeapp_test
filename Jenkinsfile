@@ -7,7 +7,7 @@ pipeline {
     dockerImage = ""
   }
 
-  agent any
+ # agent any
 
   stages {
 
